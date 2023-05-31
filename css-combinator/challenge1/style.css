@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+div {
+    border: 1px solid black;
+}
+
+div > p {
+    color: blue;
+    font-weight: bold;
+}
+
+div > p ~ p {
+    color: red;
+    text-decoration: underline;
+    font-weight: 100;
+}
+
+div > ul > li {
+    list-style: none;
+}
+
+div + p {
+    color: coral;
+    font-weight: bold;
+}
+
+div + p + p {
+    color: brown;
+}
+div + p + p + p {
+    color: brown;
+}
