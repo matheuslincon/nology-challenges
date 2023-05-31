@@ -1,0 +1,30 @@
+/* #94ec94 fc6cb4 */
+
+/* .card {
+    background-color: #94ec94;
+    border: 2px solid #fb7b54;
+}
+
+.card-content {
+    background-color: #fc6cb4;
+} */
+
+.container {
+    background-color: #94ec94;
+    border: 1px solid #fb7b54;
+}
+
+.card-container {
+    border: 1px solid #fb7b54;
+    padding: 15px 0.5px;
+}
+
+.card {
+    border: 1px solid #fb7b54;
+    background-color: #fc6cb4;
+    padding: 0px 30px;
+}
+
+.card > p {
+    padding: 0px 30px;
+}

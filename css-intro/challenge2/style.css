@@ -1,0 +1,22 @@
+h1 {
+    color: #fb7b54;
+    text-align: center;
+}
+
+h3 {
+    text-align: right;
+    font-weight: 100;
+}
+
+h4 {
+    color: #128a25;
+}
+
+ul {
+    border: 2px solid black;
+    list-style-type: none;
+}
+
+#favouriteBand {
+    text-decoration: underline;
+}
