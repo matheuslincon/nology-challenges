@@ -1,0 +1,56 @@
+#container {
+    border: 1px solid black;
+    width: 600px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+
+.card {
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#xAxis {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+
+#lightBlue {
+    background-color: lightblue;
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#pink {
+    background-color: pink;
+}
+
+#grey {
+    background-color: grey;
+}
+
+#ice {
+    background-color: lightcyan;
+}
+
+#darkBlue {
+    background-color: darkBlue;
+}
