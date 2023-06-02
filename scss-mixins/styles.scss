@@ -1,0 +1,18 @@
+@use './mixins.scss';
+
+.button {
+    @include mixins.challenge(dotted, red);
+    background-color: rgb(239, 239, 239);
+}
+
+.chip {
+    @include mixins.challenge(solid,blue);
+}
+
+.pill {
+    @include mixins.challenge(dashed, blue);
+}
+
+p {
+    margin: 0;
+}
