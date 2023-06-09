@@ -82,14 +82,9 @@ export const findType = () => {
   // Write your code here
   switch(typeof thing) {
     case "string":
-      return "This is a string";
-      break;
     case "number":
-      return "This is a number";
-      break;
     case "boolean":
-      return "This is a boolean";
-      break;
+      return `This is a ${typeof thing}`;
     default:
       return "I don't know what this thing is"
   }
@@ -151,5 +146,5 @@ const pascalCaseVariableName = "IWantToBeSnakeCase";
 
 export const convertPascalCaseToSnakeCase = () => {
   // Write your code here
-  return pascalCaseVariableName.replace(/\.?([A-Z])/g, function (x){return "_" + x.toLowerCase()}).replace(/^_/, "");
+  return pascalCaseVariableName.replace(/[A-Z]/g, (x) => {return "_" + x.toLowerCase()}).replace(/^_/, "");
 };
