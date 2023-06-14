@@ -150,13 +150,13 @@ console.log(capOddLetters("matheuz"));
 // ```
 
 const noVowels = (str) => {
-    let newStr = []
+    let newStr = ""
     for(let i = 0; i < str.length; i++) {
         if(!/[aeiou]/gi.test(str[i])) {
-            newStr.push(str[i])
+            newStr+= str[i]
         }
     }
-    return newStr.join("")
+    return newStr
 }
 
 console.log(noVowels("Matheus"))

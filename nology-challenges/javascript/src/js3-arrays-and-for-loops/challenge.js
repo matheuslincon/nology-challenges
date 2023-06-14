@@ -22,7 +22,7 @@
  */
 
 export const createRecipeString = (ingredientsArr) => {
-  return;
+  return ingredientsArr.join("+");
 };
 
 /**
@@ -33,7 +33,7 @@ export const createRecipeString = (ingredientsArr) => {
  */
 
 export const getFirstAndLastItems = (itemsArr) => {
-  return;
+  return [itemsArr[0], itemsArr[itemsArr.length - 1]];
 };
 
 /**
@@ -44,7 +44,13 @@ export const getFirstAndLastItems = (itemsArr) => {
  */
 
 export const totalScores = (scoreArr) => {
-  return;
+  let score = 0
+
+  for(let i = 0; i < scoreArr.length; i++) {
+    score += scoreArr[i]
+  }
+
+  return score;
 };
 
 /**
@@ -60,7 +66,13 @@ export const totalScores = (scoreArr) => {
  */
 
 export const totalRange = (rangeMax) => {
-  return;
+  let sum = 0
+
+  for(let i = 1; i <= rangeMax; i++){
+    sum+= i
+  }
+
+  return sum;
 };
 
 /**
@@ -71,7 +83,10 @@ export const totalRange = (rangeMax) => {
  */
 
 export const moveFirstAndLastItems = (itemsArr) => {
-  return;
+  const newItensArr = [...itemsArr]
+  const lastElement = newItensArr.pop()
+  newItensArr.unshift(lastElement)
+  return newItensArr;
 };
 
 /**
@@ -89,7 +104,14 @@ export const moveFirstAndLastItems = (itemsArr) => {
  */
 
 export const removeEvenNumbers = (numberArr) => {
-  return;
+  const newNumArr = []
+
+  for(let i = 0; i < numberArr.length; i++) {
+    if(numberArr[i] % 2 !== 0) {
+      newNumArr.push(numberArr[i])
+    }
+  }
+  return newNumArr;
 };
 
 /**
@@ -105,7 +127,17 @@ export const removeEvenNumbers = (numberArr) => {
  */
 
 export const generateAverage = (numberArr) => {
-  return;
+  if(numberArr.length === 0) return 0
+
+  let sum = 0
+  
+  for(let i = 0; i < numberArr.length; i++) {
+    sum += numberArr[i]
+  }
+
+  const average = sum / numberArr.length;
+
+  return Math.ceil(average);
 };
 
 /**
@@ -116,7 +148,13 @@ export const generateAverage = (numberArr) => {
  */
 
 export const reverseOrder = (toReverseArr) => {
-  return;
+  const reversedArr = []
+
+  for(let i = toReverseArr.length - 1; i >= 0; i--) {
+    reversedArr.push(toReverseArr[i])
+  }
+  
+  return reversedArr;
 };
 
 /**
