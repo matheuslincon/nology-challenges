@@ -22,7 +22,10 @@
  */
 
 export const totalScoresArr = (scoresArr) => {
-  return;
+  const score = scoresArr.reduce((acc, curr) => {
+    return acc += curr
+  }, 0)
+  return score;
 };
 
 /**
@@ -35,7 +38,7 @@ export const totalScoresArr = (scoresArr) => {
  */
 
 export const reverseString = (toReverse) => {
-  return;
+  return toReverse.split("").reverse().join("")
 };
 
 /**
@@ -48,7 +51,10 @@ export const reverseString = (toReverse) => {
  */
 
 export const sortCharactersAlphabetically = (charcterArr) => {
-  return;
+  const characterLower = charcterArr.map((char) => {
+    return char.toLowerCase()
+  })
+  return characterLower.sort();
 };
 
 /**
@@ -63,7 +69,7 @@ export const sortCharactersAlphabetically = (charcterArr) => {
  */
 
 export const sortNumbersHighToLow = (numberArr) => {
-  return;
+  return numberArr.sort(((a, b) => a - b)).reverse();
 };
 
 /**
@@ -94,7 +100,14 @@ export const checkItemInstock = (toCheck) => {
     "blueberry",
     "melon",
   ];
-  return;
+
+  const found = stockList.find((item) => item === toCheck)
+
+  if(found) {
+    return `${found} is instock, it is on aisle ${stockList.indexOf(found)}.`
+  } else {
+    return `Sorry ${toCheck} is not instock.`
+  }
 };
 
 /**
@@ -108,7 +121,7 @@ export const checkItemInstock = (toCheck) => {
  */
 
 export const checkPrimaryColours = (coloursArr) => {
-  return;
+  return coloursArr.every((color) => color === "red" || color === "blue" || color === "yellow");
 };
 
 /**
@@ -125,7 +138,7 @@ export const checkPrimaryColours = (coloursArr) => {
  */
 
 export const checkStringPalindrome = (stringOne) => {
-  return;
+  return stringOne === stringOne.split("").reverse().join("");
 };
 
 /**
@@ -139,7 +152,10 @@ export const checkStringPalindrome = (stringOne) => {
  */
 
 export const totalNestedScoresArr = (scoresArr) => {
-  return;
+  const totalScoreArr = scoresArr.map((arr) => {
+    return arr.reduce((acc, curr) => acc += curr)
+  })
+  return totalScoreArr;
 };
 
 /**
