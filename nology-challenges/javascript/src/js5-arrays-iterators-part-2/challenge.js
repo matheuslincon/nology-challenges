@@ -138,7 +138,7 @@ export const checkPrimaryColours = (coloursArr) => {
  */
 
 export const checkStringPalindrome = (stringOne) => {
-  return stringOne === stringOne.split("").reverse().join("");
+  return stringOne === reverseString(stringOne);
 };
 
 /**
