@@ -22,6 +22,7 @@
  */
 export const getFurniturePrice = (furniture) => {
   /* Write code here */
+  return furniture.price
 };
 
 /**
@@ -33,6 +34,8 @@ export const getFurniturePrice = (furniture) => {
  */
 export const setFurnitureStoreLocation = (furniture, location) => {
   /* Write code here */
+  furniture.location = location
+  return furniture
 };
 
 /**
@@ -47,6 +50,10 @@ export const setFurnitureStoreLocation = (furniture, location) => {
  */
 export const makeSpaceship = (name, noOfSeats, engineType, canTravelSolarSystems) => {
   /* Write code here */
+  const spaceShip = {
+    name, noOfSeats, engineType, canTravelSolarSystems
+  }
+  return spaceShip
 };
 
 /* Intermediate Challenges */
@@ -60,6 +67,12 @@ export const makeSpaceship = (name, noOfSeats, engineType, canTravelSolarSystems
  */
 export const setUserName = (user, username) => {
   /* Write code here */
+  if(user.username) {
+    return user
+  } else {
+    user.username = username
+    return user
+  }
 };
 
 /**
@@ -71,6 +84,10 @@ export const setUserName = (user, username) => {
  */
 export const splitFullNameToFirstAndLast = (customer) => {
   /* Write code here */
+  customer.firstName = customer.fullName.split(" ")[0]
+  customer.lastName = customer.fullName.split(" ")[1]
+
+  return customer
 };
 
 /**
@@ -84,6 +101,7 @@ export const splitFullNameToFirstAndLast = (customer) => {
  */
 export const accessGivenKey = (object, key) => {
   /* Write code here */
+  return object[key]
 };
 
 /* Advanced Challenges */
@@ -97,6 +115,8 @@ export const accessGivenKey = (object, key) => {
  */
 export const getUserAddress = (user) => {
   /* Write code here */
+  const { address } = user;
+  return `${address.line1} ${address.line2} ${address.city} ${address.postcode}`
 };
 
 /**
