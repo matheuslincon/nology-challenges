@@ -18,6 +18,11 @@
  */
 export const getEmployeeQuotes = (employeeArr) => {
   // Write code here
+  const quotes = employeeArr.reduce((acc, curr) => {
+    acc.push(curr.quote)
+    return acc
+  }, [])
+  return quotes
 };
 
 /**
@@ -28,6 +33,10 @@ export const getEmployeeQuotes = (employeeArr) => {
  */
 export const getTheManagers = (employeeArr) => {
   // Write code here
+  const managers = employeeArr.filter((employee) => {
+    return employee.isManagement
+  })
+  return managers
 };
 
 /**
@@ -38,6 +47,7 @@ export const getTheManagers = (employeeArr) => {
  */
 export const getNumberOfKeys = (object) => {
   // Write code here
+  return Object.keys(object).length
 };
 
 /* Intermediate Challenges */
@@ -51,6 +61,7 @@ export const getNumberOfKeys = (object) => {
  */
 export const findMostExpensiveItem = (shoppingBasketArr) => {
   // Write code here
+  
 };
 
 /**
